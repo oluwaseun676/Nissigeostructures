@@ -14,12 +14,12 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use((err, req, res, next) => {
   console.error(err.stack);
-s.status(500).send('Something went wrong!');}
+res.status(500).send('Something went wrong!');})
 
 mongoose.connect('mongodb://127.0.0.1:27017/hydronissi2', {
   useNewUrlParser: true,
   useUnifiedTopology: true
-});
+})
 app.use(express.json());
 
 app.get('/', (req, res) => {
