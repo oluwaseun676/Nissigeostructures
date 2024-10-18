@@ -253,6 +253,34 @@ max-width: 80%;
     min-width: 250px; /* Minimum width for columns */
 }
 
+#main {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between header elements */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Add padding to the header */
+
+}
+
+.nav-links {
+    list-style: none; /* Remove default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for links */
+}
+
+.nav-links li {
+    margin-left: 20px; /* Add spacing between links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Change color on hover */
+}
 /* Media Queries for Different Screen Sizes */
 
 /* Small devices (phones, 600px and down) */
@@ -292,12 +320,52 @@ border-radius: 8px 8px 0 0;
 </style>
 </head>
 <body>
-<header style="text-align: center;">
-<h1  style="color:yellow; font-size: 34px; max-width: 100%;">Nissi Geostructures Limited  RC:713519</h1>
-<p style="font-size: 34px;">Quality and Affordable Water Solutions</p>
+<header style="text-align: center;" id="main">
+<div>
+<h1  style="color:black; font-size: 34px; max-width: 100%;">Nissi Geostructures Limited  RC:713519</h1>
+    <p style="font-size: 34px;">Quality and Affordable Water Solutions</p>
+</div>
+
+<nav>
+<ul class="nav-links">
+<li><a href="#welcome">HOME</a></li>
+<li><a href="#services">SERVICES</a></li>
+<li><a href="#profile">PROFILE</a></li>
+<li><a href="#history">HISTORY</a></li>
+<li><a href="#footer">CONTACT US
+</a></li>
+    </ul>
+</nav>
     </header>
-    <main>
-        <section class="service">
+    <section id="welcome">
+        <h1>Welcome to Nissi Geostructures</h1>
+        <p>At Nissi Geostructures, we are dedicated to providing innovative hydrogeological solutions that empower sustainable development and enhance environmental stewardship. With years of expertise in the field, our team of skilled professionals is committed to delivering reliable assessments, comprehensive analyses, and tailored services that meet the unique needs of our clients.</p>
+    
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li><strong>Expertise You Can Trust</strong>: Our experienced geologists and hydrogeologists utilize the latest technologies and methodologies to ensure accurate and efficient results.</li>
+<li><strong>Customized Solutions</strong>: We understand that every project is unique. That's why we work closely with you to develop tailored strategies that align with your specific requirements and goals.</li>
+            <li><strong>Commitment to Sustainability</strong>: At Nissi Geostructures, we prioritize environmentally responsible practices, ensuring that our solutions not only meet your needs but also contribute to the protection of our planet.</li>
+        </ul>
+    
+        <h2>Our Services</h2>
+        <ul>
+            <li>Groundwater Assessments</li>
+            <li>Site Investigations</li>
+            <li>Environmental Impact Studies</li>
+            <li>Hydrogeological Modeling</li>
+            <li>Water Resource Management</li>
+        </ul>
+    
+<h2>Let's Work Together!</h2>
+<p>Whether you're a developer, engineer, or environmental consultant, Nissi Geostructures is here to support your projects with expertise and dedication. Our goal is to provide you with the insights and solutions you need to make informed decisions and achieve successful outcomes.</p>
+    
+        <p><strong>Get in Touch!</strong> Ready to start your project or learn more about our services? Contact us today for a free consultation! Let Nissi Geostructures be your trusted partner in navigating the complexities of hydrogeology.</p>
+    </section>
+    
+<main id="services">
+<header style="text-align: center; margin-bottom: 20px;"><h1 style="color: #ff69b4;display: block; font-size: 24px; color: #000;">SERVICES</h1></header>
+<section class="service">
 <img src="../images/wellDrilling.png" alt="Well Drilling">
             <div class="service-text">
                 <h2>Well Drilling</h2>
@@ -306,8 +374,8 @@ border-radius: 8px 8px 0 0;
         </section>
         <section class="service">
 <img src="./BenefitsOfAWaterWellDrilling.jpg" alt="Borehole Drilling">
-            <div class="service-text">
-                <h2>Borehole Drilling</h2>
+<div class="service-text">
+<h2>Borehole Drilling</h2>
             <p>Our borehole drilling services are top-notch, offering deep and efficient water extraction solutions.</p>
             </div>
         </section>
@@ -319,9 +387,9 @@ border-radius: 8px 8px 0 0;
             </div>
         </section>
     </main>
-    <section class="company-profile">
+<section class="company-profile" id="profile">
         <div class="header">
-<h1 style="color: #ff69b4;">COMPANY PROFILE</h1>
+<h1 style="color: black;">COMPANY PROFILE</h1>
         </div>
         <div class="company-name">
             <h2>NISSI</h2>
@@ -353,7 +421,7 @@ margin-left: auto;
 margin-right: auto;" src="../images/pexels-theplanetspeaks-12726229.jpg" alt="Building 4">
         </div>
     </section>
-<section class="company-history">
+<section class="company-history" id="history">
 <div class="profile-history">
 <h1 style="color:black; font-size: 24px;" ><em>ABOUT US</em></h1>
         </div>
@@ -380,10 +448,7 @@ margin-right: auto;" src="../images/pexels-theplanetspeaks-12726229.jpg" alt="Bu
 
         </div>
     </section>
-    <footer>
-        <img  style="display: block; height: auto; width: 100%;
-margin-left: auto;
-margin-right: auto;"src="../images/istockphoto-1454629161-1024x1024.jpg" alt="vision statement">
+<footer id="footer">
 <p style="color:#ff69d2;"> <em>CONTACT US TODAY AT<br>EMAIL : hydronissi2@gmail.com <br>TEL : 08023526158,08055622074</em> <br>OFFICE ADDRESS: 12B FAGBA CRESCENT,OFF ACME ROAD, OGBA, LAGOS STATE, NIGERIA </p>
 </footer>
 <script src="../JS/homepage.js"></script>
