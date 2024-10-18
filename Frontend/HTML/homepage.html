@@ -15,8 +15,12 @@ background-image: url('../images/black\ themed\ image\ for\ website\ background.
 background-size: cover;
     background-repeat: no-repeat; 
     background-attachment: fixed;
+    overflow-x: hidden;
 }
-
+p {
+    word-wrap: break-word; /* Breaks long words to fit within the container */
+    overflow-wrap: break-word; /* Ensures compatibility with different browsers */
+}
 header {
 background-color:goldenrod;
     color: white;
