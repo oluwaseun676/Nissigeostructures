@@ -205,29 +205,19 @@ h1, h2, h3, h4, h5, h6, p, a, li, span, div {
 }
 
 /* Media Queries for Responsive Text Scaling */
-@media (max-width: 1200px) {
+@media only screen and (max-width: 768px) {
     html {
         font-size: 15px;
     }
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 1024px) and (orientation:landscape) {
     html {
         font-size: 14px;
     }
 }
 
-@media (max-width: 768px) {
-    html {
-        font-size: 13px;
-    }
-}
 
-@media (max-width: 576px) {
-    html {
-        font-size: 12px;
-    }
-}
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -249,17 +239,17 @@ max-width: 80%;
 
 .col {
     flex: 1;
-    padding: 15px;
-    min-width: 250px; /* Minimum width for columns */
+padding: 15px;
+min-width: 250px; /* Minimum width for columns */
 }
-
+/*** 
 #main {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space between header elements */
-    align-items: center; /* Center items vertically */
-    padding: 10px 20px; /* Add padding to the header */
+    display: flex; 
+    justify-content: space-between; 
+align-items: center;
+    padding: 10px 20px; 
 
-}
+} **/
 
 .nav-links {
     list-style: none; /* Remove default list styling */
@@ -269,7 +259,7 @@ max-width: 80%;
 }
 
 .nav-links li {
-    margin-left: 20px; /* Add spacing between links */
+margin-left: 15px; /* Add spacing between links */
 }
 
 .nav-links a {
@@ -291,11 +281,11 @@ max-width: 80%;
 }
 
 /* Medium devices (tablets, 768px and down) */
-@media only screen and (max-width: 768px) {
-    .col {
-        min-width: 50%; /* Two columns */
-    }
-}
+/* @media only screen and (max-width: 768px) {
+.col {
+min-width: 50%; /* Two columns */
+/* } */
+/* }  */
 
 /* Large devices (laptops/desktops, 1024px and up) */
 @media only screen and (min-width: 1024px) {
@@ -328,7 +318,7 @@ border-radius: 8px 8px 0 0;
 
 <nav>
 <ul class="nav-links">
-<li><a href="#welcome">HOME</a></li>
+<li style="margin-left: 0px;"><a href="#welcome">HOME</a></li>
 <li><a href="#services">SERVICES</a></li>
 <li><a href="#profile">PROFILE</a></li>
 <li><a href="#history">HISTORY</a></li>
@@ -398,7 +388,7 @@ border-radius: 8px 8px 0 0;
 <img src="../images/view-realistic-hands-touching-clear-flowing-water_23-2151210243.jpg" alt="Community-Water-Supply">
     <div class="service-text">
         <h2>Community Water Supply </h2>
-        <p>We ensure the reliability of your community's water supply through innovative borehole drilling methods that provide clean and safe access to groundwater for all residents.
+<p>We ensure the reliability of your community's water supply through innovative borehole drilling methods that provide clean and safe access to groundwater for all residents.
         
         </p>
                     </div>
