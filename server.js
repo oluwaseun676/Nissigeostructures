@@ -7,6 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 // Set security headers with Helmet
 app.use(helmet());
+app.use(express.static(path.join(__dirname, 'Frontend')));
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // limit each IP to 100 requests per windowMs
@@ -26,6 +27,31 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, "Frontend", "HTML", "homepage.html"));
   console.log("File sent Welcome to the homepage");
   return;
+});
+app.get('/geo', (req, res) => {
+res.sendFile(path.resolve(__dirname, "Frontend", "HTML", "Geotechnical.html"));
+console.log("File sent Welcome to the geotechnical page");
+return;
+});
+app.get('/borehole', (req, res) => {
+res.sendFile(path.resolve(__dirname, "Frontend", "HTML", "drilling.html"));
+console.log("File sent Welcome to the drilling page");
+return;
+});
+app.get('/water', (req, res) => {
+res.sendFile(path.resolve(__dirname, "Frontend", "HTML", "water.html"));
+console.log("File sent Welcome to the water page");
+return;
+});
+app.get('/community', (req, res) => {
+res.sendFile(path.resolve(__dirname, "Frontend", "HTML", "community.html"));
+console.log("File sent Welcome to the community page");
+return;
+});
+app.get('/mining', (req, res) => {
+res.sendFile(path.resolve(__dirname, "Frontend", "HTML", "mining.html"));
+console.log("File sent Welcome to the mining page");
+return;
 });
 
 const serviceRoutes = require('./Backend/Route/route.js');
